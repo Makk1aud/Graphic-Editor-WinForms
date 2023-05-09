@@ -41,6 +41,7 @@ namespace Graphic_Editor
         {
             saveBtn.Enabled = enable;
             blackWhiteBtn.Enabled = enable;
+            mainPctBox.Enabled = enable;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -135,11 +136,27 @@ namespace Graphic_Editor
         private void penSizeTrBar_Scroll(object sender, EventArgs e)
         {
             blackPen.Width = penSizeTrBar.Value;
+            penSixeTxb.Text = penSizeTrBar.Value.ToString();
         }
 
         public Form1()
         {
             InitializeComponent();           
+        }
+
+        private void penSixeTxb_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                blackPen.Width = Convert.ToInt32(penSixeTxb.Text);
+            }
+            catch(Exception ex) { }
+        }
+
+        public void ChangepPenColor(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            blackPen.Color = button.BackColor;
         }
     }
 }
