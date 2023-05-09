@@ -126,6 +126,7 @@ namespace Graphic_Editor
                 }
             }
             Refresh();
+            blackWhiteBtn.Enabled= false;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
