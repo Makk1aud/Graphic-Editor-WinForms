@@ -106,11 +106,11 @@ namespace Graphic_Editor
                 for (int j = 0; j < bitmapImage.Height; j++)
                 {
                     int R = bitmapImage.GetPixel(i, j).R;
-                    int G = bitmapImage.GetPixel(i, j).R;
-                    int B = bitmapImage.GetPixel(i, j).R;
+                    int G = bitmapImage.GetPixel(i, j).G;
+                    int B = bitmapImage.GetPixel(i, j).B;
                     int Gray = (R + G + B) / 3;
 
-                    Color p = Color.FromArgb(50, Gray, Gray, Gray);
+                    Color p = Color.FromArgb(255, Gray, Gray, Gray);
 
                     bitmapImage.SetPixel(i, j, p);
                 }

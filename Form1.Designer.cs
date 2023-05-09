@@ -58,7 +58,7 @@
             // 
             this.openBtn.Location = new System.Drawing.Point(24, 389);
             this.openBtn.Name = "openBtn";
-            this.openBtn.Size = new System.Drawing.Size(107, 25);
+            this.openBtn.Size = new System.Drawing.Size(110, 41);
             this.openBtn.TabIndex = 1;
             this.openBtn.Text = "Открыть";
             this.openBtn.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(273, 389);
+            this.saveBtn.Location = new System.Drawing.Point(270, 389);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(107, 25);
+            this.saveBtn.Size = new System.Drawing.Size(110, 41);
             this.saveBtn.TabIndex = 1;
             this.saveBtn.Text = "Сохранить";
             this.saveBtn.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // 
             // blackWhite
             // 
-            this.blackWhite.Location = new System.Drawing.Point(150, 389);
+            this.blackWhite.Location = new System.Drawing.Point(395, 230);
             this.blackWhite.Name = "blackWhite";
             this.blackWhite.Size = new System.Drawing.Size(107, 25);
             this.blackWhite.TabIndex = 1;
