@@ -32,15 +32,16 @@
             this.openBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.blackWhiteBtn = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.penSizeTrBar = new System.Windows.Forms.TrackBar();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainPctBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.penSizeTrBar)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPctBox
@@ -76,23 +77,24 @@
             // 
             // blackWhiteBtn
             // 
-            this.blackWhiteBtn.Location = new System.Drawing.Point(395, 230);
+            this.blackWhiteBtn.Location = new System.Drawing.Point(395, 234);
             this.blackWhiteBtn.Name = "blackWhiteBtn";
-            this.blackWhiteBtn.Size = new System.Drawing.Size(107, 25);
+            this.blackWhiteBtn.Size = new System.Drawing.Size(88, 36);
             this.blackWhiteBtn.TabIndex = 1;
-            this.blackWhiteBtn.Text = "В черно-белый формат";
+            this.blackWhiteBtn.Text = "Черно-белый";
             this.blackWhiteBtn.UseVisualStyleBackColor = true;
             this.blackWhiteBtn.Click += new System.EventHandler(this.blackWhite_Click);
             // 
-            // trackBar1
+            // penSizeTrBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(386, 52);
-            this.trackBar1.Maximum = 6;
-            this.trackBar1.Minimum = 1;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(194, 45);
-            this.trackBar1.TabIndex = 2;
-            this.trackBar1.Value = 1;
+            this.penSizeTrBar.Location = new System.Drawing.Point(386, 52);
+            this.penSizeTrBar.Maximum = 6;
+            this.penSizeTrBar.Minimum = 1;
+            this.penSizeTrBar.Name = "penSizeTrBar";
+            this.penSizeTrBar.Size = new System.Drawing.Size(194, 45);
+            this.penSizeTrBar.TabIndex = 2;
+            this.penSizeTrBar.Value = 1;
+            this.penSizeTrBar.Scroll += new System.EventHandler(this.penSizeTrBar_Scroll);
             // 
             // button1
             // 
@@ -103,7 +105,6 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 22);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -162,18 +163,29 @@
             this.button6.TabIndex = 3;
             this.button6.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(427, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 18);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Толщина кисти";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 442);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.penSizeTrBar);
             this.Controls.Add(this.blackWhiteBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.openBtn);
@@ -183,7 +195,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainPctBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.penSizeTrBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,13 +207,14 @@
         private System.Windows.Forms.Button openBtn;
         private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.Button blackWhiteBtn;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.TrackBar penSizeTrBar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -47,6 +47,7 @@ namespace Graphic_Editor
         {
             EnableButtons(false);
             blackPen = new Pen(Color.Black, 1);
+
         }
 
         private void mainPctBox_MouseDown(object sender, MouseEventArgs e)
@@ -116,7 +117,7 @@ namespace Graphic_Editor
                     int R = bitmapImage.GetPixel(i, j).R;
                     int G = bitmapImage.GetPixel(i, j).G;
                     int B = bitmapImage.GetPixel(i, j).B;
-                    int Gray = (R + G + B) / 3;
+                    int Gray = (R + G + B) / 7;
 
                     Color p = Color.FromArgb(255, Gray, Gray, Gray);
 
@@ -129,6 +130,11 @@ namespace Graphic_Editor
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void penSizeTrBar_Scroll(object sender, EventArgs e)
+        {
+            blackPen.Width = penSizeTrBar.Value;
         }
 
         public Form1()
