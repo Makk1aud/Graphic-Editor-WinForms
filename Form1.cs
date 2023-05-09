@@ -34,11 +34,18 @@ namespace Graphic_Editor
                 mainPctBox.Image = bitmapImage;
                 graphics= Graphics.FromImage(mainPctBox.Image);
             }
+            EnableButtons(true);
+        }
 
+        private void EnableButtons(bool enable)
+        {
+            saveBtn.Enabled = enable;
+            blackWhiteBtn.Enabled = enable;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            EnableButtons(false);
             blackPen = new Pen(Color.Black, 1);
         }
 
@@ -64,6 +71,7 @@ namespace Graphic_Editor
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Сохранить картинку как ";
             saveFileDialog.OverwritePrompt= false;
@@ -116,6 +124,11 @@ namespace Graphic_Editor
                 }
             }
             Refresh();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         public Form1()
