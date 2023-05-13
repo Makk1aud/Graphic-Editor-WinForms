@@ -187,6 +187,7 @@
             this.penSixeTxb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.penSixeTxb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.penSixeTxb.Location = new System.Drawing.Point(511, 22);
+            this.penSixeTxb.MaxLength = 3;
             this.penSixeTxb.Multiline = true;
             this.penSixeTxb.Name = "penSixeTxb";
             this.penSixeTxb.Size = new System.Drawing.Size(41, 28);
@@ -194,6 +195,7 @@
             this.penSixeTxb.Text = "1";
             this.penSixeTxb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.penSixeTxb.TextChanged += new System.EventHandler(this.penSixeTxb_TextChanged);
+            this.penSixeTxb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.penSixeTxb_KeyDown);
             // 
             // buttonClear
             // 

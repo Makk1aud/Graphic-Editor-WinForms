@@ -163,6 +163,11 @@ namespace Graphic_Editor
             EnableButtons(false);
         }
 
+        private void penSixeTxb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) e.Handled = true;
+        }
+
         public void ChangepPenColor(object sender, EventArgs e)
         {
             Button button = sender as Button;
