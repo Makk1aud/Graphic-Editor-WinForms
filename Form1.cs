@@ -33,8 +33,9 @@ namespace Graphic_Editor
                 bitmapImage = new Bitmap(image, mainPctBox.Width, mainPctBox.Height);
                 mainPctBox.Image = bitmapImage;
                 graphics= Graphics.FromImage(mainPctBox.Image);
+                EnableButtons(true);
             }
-            EnableButtons(true);
+            
         }
 
         private void EnableButtons(bool enable)
@@ -42,6 +43,7 @@ namespace Graphic_Editor
             saveBtn.Enabled = enable;
             blackWhiteBtn.Enabled = enable;
             mainPctBox.Enabled = enable;
+            buttonClear.Enabled = enable;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -152,6 +154,13 @@ namespace Graphic_Editor
                 blackPen.Width = Convert.ToInt32(penSixeTxb.Text);
             }
             catch(Exception ex) { }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            mainPctBox.Image= null;
+
+            EnableButtons(false);
         }
 
         public void ChangepPenColor(object sender, EventArgs e)

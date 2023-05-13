@@ -41,6 +41,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.penSixeTxb = new System.Windows.Forms.TextBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainPctBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.penSizeTrBar)).BeginInit();
             this.SuspendLayout();
@@ -194,6 +195,16 @@
             this.penSixeTxb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.penSixeTxb.TextChanged += new System.EventHandler(this.penSixeTxb_TextChanged);
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(149, 389);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(110, 41);
+            this.buttonClear.TabIndex = 1;
+            this.buttonClear.Text = "Очистить";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +220,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.penSizeTrBar);
             this.Controls.Add(this.blackWhiteBtn);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.openBtn);
             this.Controls.Add(this.mainPctBox);
@@ -238,6 +250,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox penSixeTxb;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 
